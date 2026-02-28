@@ -14,7 +14,7 @@ export default function Home() {
           <div className="relative">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-slate-200">
               <Sparkles size={14} />
-              Portafolio orientado a datos, control y reporteo
+              Analista de datos • Inventarios • Reporteo
             </div>
 
             <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">
