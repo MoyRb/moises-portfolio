@@ -51,7 +51,7 @@ export default function ProjectCard({ p }: { p: Project }) {
               <span
                 key={l.label}
                 className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-slate-400"
-                title="Pásame el link y lo conecto"
+                title={l.tooltip ?? "Pásame el link y lo conecto"}
               >
                 {l.label}
               </span>

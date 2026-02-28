@@ -3,7 +3,7 @@ export type Project = {
   subtitle: string;
   highlights: string[];
   stack: string[];
-  links: { label: string; href?: string }[];
+  links: { label: string; href?: string; tooltip?: string }[];
 };
 
 export const PROJECTS: Project[] = [
@@ -18,8 +18,8 @@ export const PROJECTS: Project[] = [
     ],
     stack: ["Next.js/React", "Supabase", "Postgres", "Excel/Reportes"],
     links: [
-      { label: "Repo (si es privado, luego lo enlazamos)" },
-      { label: "Demo (opcional)" },
+      { label: "Repo", href: "https://github.com/MoyRb/cachu-project" },
+      { label: "Demo", tooltip: "Demo próximamente" },
     ],
   },
   {
@@ -33,8 +33,8 @@ export const PROJECTS: Project[] = [
     ],
     stack: ["Next.js/React", "Supabase", "Postgres", "RLS/Seguridad"],
     links: [
-      { label: "Repo (si es privado, luego lo enlazamos)" },
-      { label: "Demo (opcional)" },
+      { label: "Repo", href: "https://github.com/MoyRb/farmacia-libra" },
+      { label: "Demo", tooltip: "Demo próximamente" },
     ],
   },
   {
