@@ -83,6 +83,34 @@ export default function Home() {
           </div>
         </header>
 
+        {/* EXPERIENCIA EN ANÁLISIS DE DATOS */}
+        <section className="mt-10 rounded-[2rem] border border-white/10 bg-white/5 p-6 md:p-8">
+          <h2 className="text-2xl font-semibold tracking-tight">Experiencia en análisis de datos</h2>
+          <p className="mt-2 max-w-3xl text-slate-200">
+            Perfil orientado a Analista de Costos en industria, combinando operación, control y reporteo para
+            decisiones con información confiable.
+          </p>
+
+          <div className="mt-6 grid gap-5 md:grid-cols-2">
+            <Panel
+              title="Gestión operativa y control"
+              items={[
+                "Elaboración de KPIs y reportes operativos para control y toma de decisiones.",
+                "Limpieza, validación y conciliación de información entre múltiples fuentes.",
+                "Enfoque en inventarios, operación y variaciones para fortalecer controles.",
+              ]}
+            />
+            <Panel
+              title="Reporteo y seguimiento"
+              items={[
+                "Generación de reportes exportables (Excel/CSV) para análisis y comunicación.",
+                "Construcción de tableros para seguimiento de indicadores clave.",
+                "Monitoreo de variaciones de COGS y soporte a acciones de mejora operativa.",
+              ]}
+            />
+          </div>
+        </section>
+
         {/* PROYECTOS */}
         <section className="mt-10">
           <h2 className="text-2xl font-semibold tracking-tight">Proyectos destacados</h2>
