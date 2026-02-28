@@ -1,4 +1,4 @@
-import { Github, Mail, Download, BarChart3, Boxes, Sparkles } from "lucide-react";
+import { Github, Mail, MessageCircle, Phone, Download, BarChart3, Boxes, Sparkles } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
 import { PROJECTS } from "@/lib/projects";
 
@@ -31,7 +31,7 @@ export default function Home() {
 
             <div className="mt-6 flex flex-wrap gap-3">
               <a
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-400/25 to-violet-400/25 px-5 py-2.5 text-sm font-medium text-white ring-1 ring-white/10 transition hover:from-emerald-400/35 hover:to-violet-400/35"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-400/25 to-violet-400/25 px-5 py-2.5 text-sm font-medium text-white ring-1 ring-white/10 transition hover:from-emerald-400/35 hover:to-violet-400/35 sm:w-auto"
                 href="https://github.com/MoyRb"
                 target="_blank"
                 rel="noreferrer"
@@ -41,15 +41,33 @@ export default function Home() {
               </a>
 
               <a
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-white/10"
-                href="mailto:tu-correo@ejemplo.com"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-400/15 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-emerald-400/25 sm:w-auto"
+                href="mailto:moisesmed2482@gmail.com"
               >
                 <Mail size={18} />
                 Contacto
               </a>
 
               <a
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-white/10"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-400/15 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-emerald-400/25 sm:w-auto"
+                href="https://wa.me/523511345108?text=Hola%20Mois%C3%A9s,%20vi%20tu%20portafolio%20y%20me%20interesa%20tu%20perfil%20para%20Analista%20de%20Costos."
+                target="_blank"
+                rel="noreferrer"
+              >
+                <MessageCircle size={18} />
+                WhatsApp
+              </a>
+
+              <a
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-violet-300/30 bg-violet-400/15 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-violet-400/25 sm:w-auto"
+                href="tel:+523511345108"
+              >
+                <Phone size={18} />
+                Teléfono
+              </a>
+
+              <a
+                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-violet-300/30 bg-violet-400/15 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-violet-400/25 sm:w-auto"
                 href="/cv.pdf"
               >
                 <Download size={18} />
