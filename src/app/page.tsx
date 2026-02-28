@@ -1,4 +1,4 @@
-import { Github, Mail, MessageCircle, Phone, Download, BarChart3, Boxes, Sparkles } from "lucide-react";
+import { Github, Mail, MessageCircle, Phone, BarChart3, Boxes, Sparkles } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
 import { PROJECTS } from "@/lib/projects";
 
@@ -22,11 +22,10 @@ export default function Home() {
             </h1>
 
             <p className="mt-3 max-w-2xl text-base text-slate-200 md:text-lg">
-              Ing. en Sistemas Computacionales (ITESZ). Me enfoco en{" "}
-              <span className="font-medium text-white">análisis de datos</span>,{" "}
-              <span className="font-medium text-white">ERP / inventarios</span> y{" "}
-              <span className="font-medium text-white">automatización de reportes</span>.
-              Ideal para roles donde importan COGS, control operativo y decisiones con datos.
+              Ing. en Sistemas Computacionales (ITESZ). Construyo soluciones donde los datos sí sirven:
+              <span className="font-medium text-white"> inventarios, reporteo y control operativo</span> para que la operación sea medible.
+              Me enfoco en <span className="font-medium text-white">detectar variaciones, mermas y oportunidades de mejora</span> con
+              herramientas como Excel, ERP y SQL, aportando criterio analítico para roles de costos y análisis operativo.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -66,13 +65,6 @@ export default function Home() {
                 Teléfono
               </a>
 
-              <a
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-violet-300/30 bg-violet-400/15 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-violet-400/25 sm:w-auto"
-                href="/cv.pdf"
-              >
-                <Download size={18} />
-                Descargar CV
-              </a>
             </div>
 
             <div className="mt-7 grid gap-3 md:grid-cols-3">
@@ -146,20 +138,6 @@ export default function Home() {
             ]}
           />
         </section>
-
-        {/* FOOTER */}
-        <footer className="mt-12 pb-10 text-sm text-slate-300">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-            <p className="text-slate-200">
-              Si quieres, lo dejamos todavía más “contratable”:
-              le metemos screenshots, sección “Logros medibles”, y lo enfocamos 100% a Analista de Costos.
-            </p>
-            <p className="mt-2 text-slate-300">
-              Tip rápido: mete tu CV en <code className="rounded bg-black/30 px-1.5 py-0.5">/public/cv.pdf</code> y tu foto en{" "}
-              <code className="rounded bg-black/30 px-1.5 py-0.5">/public/profile.jpg</code>.
-            </p>
-          </div>
-        </footer>
       </div>
     </main>
   );
