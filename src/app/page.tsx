@@ -1,54 +1,51 @@
-import { Github, Mail, MessageCircle, FolderOpen, Users, ClipboardList, BriefcaseBusiness, Wrench, Sparkles, Layers3, Target, Rocket } from "lucide-react";
+import { Github, Mail, MessageCircle, FolderOpen, Users, ClipboardList, BriefcaseBusiness, Wrench } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
 import { OTHER_PROJECTS, PROJECTS } from "@/lib/projects";
 
-const FOCUS_AREAS = ["Liderazgo", "Gestión de proyectos", "Operación comercial", "Software", "Trabajo en equipo"];
+const DASHBOARD_ITEMS = ["Liderazgo", "Dirección de proyecto", "Trabajo en equipo", "Operación comercial"];
 
 export default function Home() {
   return (
     <main className="portfolio-bg min-h-screen">
-      <div className="noise-overlay" />
-      <div className="mx-auto max-w-6xl px-5 py-10">
-        <header className="hero-premium reveal-section relative overflow-hidden rounded-[2.25rem] border border-white/10 p-8">
-          <div className="particle particle-1" />
-          <div className="particle particle-2" />
-          <div className="particle particle-3" />
-          <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-emerald-400/20 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-violet-400/20 blur-3xl" />
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10">
+        <header className="hero-premium reveal-section relative overflow-hidden rounded-[1.7rem] border border-white/10 p-5 sm:p-7 md:p-8">
+          <div className="pointer-events-none absolute -top-20 -left-16 h-56 w-56 rounded-full bg-emerald-300/10 blur-3xl" />
+          <div className="pointer-events-none absolute -right-16 -bottom-20 h-56 w-56 rounded-full bg-violet-300/10 blur-3xl" />
 
-          <div className="relative grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs text-slate-100 backdrop-blur-md">
-                <Sparkles size={14} />
-                Gestión de proyectos • Liderazgo • Operación comercial • Software
+          <div className="relative grid items-start gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="min-w-0">
+              <div className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-slate-200">
+                Gestión de proyectos • Liderazgo • Operación comercial
               </div>
 
-              <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">Moisés Medina Moreno</h1>
-              <h2 className="mt-3 text-xl font-medium text-emerald-200 md:text-2xl">Gestión y Dirección de Proyectos de Software</h2>
-              <p className="mt-3 max-w-3xl text-base text-slate-200 md:text-lg">Estudiante de Ingeniería en Sistemas Computacionales con enfoque en liderazgo, operación comercial y desarrollo de soluciones digitales. He coordinado operación en Croplink y he trabajado en proyectos recientes como UCES, CachuProject, Flor del Volcán y RackHouse, conectando necesidades reales de negocio con sistemas funcionales, claros y orientados a resultados.</p>
+              <h1 className="name-title mt-4 font-semibold tracking-tight">Moisés Medina Moreno</h1>
+              <h2 className="mt-2 text-lg font-medium text-emerald-100 sm:text-xl md:text-2xl">Gestión y Dirección de Proyectos de Software</h2>
+              <p className="mt-3 max-w-2xl text-sm text-slate-200 sm:text-base">
+                Estudiante de Ingeniería en Sistemas Computacionales con enfoque en liderazgo, operación comercial y desarrollo de
+                soluciones digitales. He coordinado operación en Croplink y trabajado en UCES, CachuProject, Flor del Volcán y
+                RackHouse, conectando necesidades reales de negocio con sistemas funcionales y orientados a resultados.
+              </p>
 
-              <div className="mt-6 flex flex-wrap gap-3">
+              <div className="hero-actions mt-6">
                 <a className="btn-premium" href="https://github.com/MoyRb" target="_blank" rel="noreferrer"><Github size={18} />GitHub</a>
                 <a className="btn-secondary" href="mailto:moisesmed2482@gmail.com"><Mail size={18} />Contacto</a>
-                <a className="btn-secondary" href="https://wa.me/523511345108?text=Hola%20Mois%C3%A9s,%20vi%20tu%20portafolio%20y%20me%20interesa%20tu%20perfil%20de%20gesti%C3%B3n%20de%20proyectos." target="_blank" rel="noreferrer"><MessageCircle size={18} />WhatsApp</a>
+                <a className="btn-secondary" href="https://wa.me/523511345108" target="_blank" rel="noreferrer"><MessageCircle size={18} />WhatsApp</a>
                 <a className="btn-violet" href="#proyectos"><FolderOpen size={18} />Ver proyectos</a>
               </div>
             </div>
 
-            <div className="hero-depth-scene">
-              <div className="depth-core" />
-              {FOCUS_AREAS.map((area, i) => (
-                <div key={area} className={`floating-card floating-${i + 1}`}>
-                  <Layers3 size={16} />
-                  {area}
-                </div>
-              ))}
-              <div className="floating-badge"><Target size={16} /> Priorización</div>
-              <div className="floating-badge two"><Rocket size={16} /> Entregables</div>
-            </div>
+            <aside className="hero-panel min-w-0">
+              <h3 className="text-sm font-medium uppercase tracking-[0.12em] text-slate-300">Perfil profesional</h3>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                {DASHBOARD_ITEMS.map((item) => (
+                  <div key={item} className="dashboard-item">{item}</div>
+                ))}
+              </div>
+              <p className="mt-4 text-sm text-slate-300">Enfoque en requerimientos, comunicación, priorización y entregables con impacto real.</p>
+            </aside>
           </div>
 
-          <div className="mt-7 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             <Stat icon={<Users size={18} />} title="Liderazgo" desc="Coordinación de equipos, comunicación y toma de decisiones." />
             <Stat icon={<ClipboardList size={18} />} title="Gestión de proyectos" desc="Priorización, seguimiento, documentación y entregables." />
             <Stat icon={<BriefcaseBusiness size={18} />} title="Operación comercial" desc="Ventas, procesos, atención, clientes y control operativo." />
@@ -56,7 +53,7 @@ export default function Home() {
           </div>
         </header>
 
-        <section className="reveal-section glass-panel mt-10 rounded-[2rem] p-6 md:p-8">
+        <section className="reveal-section glass-panel mt-8 rounded-[1.6rem] p-5 sm:p-7">
           <h2 className="text-2xl font-semibold tracking-tight">Experiencia en gestión y dirección de proyectos</h2>
           <p className="mt-2 max-w-4xl text-slate-200">Perfil orientado a la gestión y dirección de proyectos de software, combinando liderazgo, operación comercial y criterio técnico para transformar necesidades reales en soluciones digitales funcionales.</p>
           <div className="mt-6 grid gap-5 md:grid-cols-3">
@@ -66,9 +63,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="proyectos" className="reveal-section mt-10">
+        <section id="proyectos" className="reveal-section mt-8">
           <h2 className="text-2xl font-semibold tracking-tight">Proyectos recientes y liderazgo aplicado</h2>
-          <p className="mt-2 text-slate-200">Selección de proyectos recientes enfocados en liderazgo, dirección de software, trabajo en equipo y operación comercial.</p>
+          <p className="mt-2 text-slate-200">Selección de proyectos enfocados en liderazgo, dirección de software, trabajo en equipo y operación comercial.</p>
           <div className="mt-6 grid gap-5 md:grid-cols-2">{PROJECTS.map((p, idx) => <ProjectCard key={p.title} p={p} priority={idx < 2} />)}</div>
           <h3 className="mt-10 text-xl font-semibold tracking-tight text-slate-100">Otros proyectos</h3>
           <div className="mt-4 grid gap-4 md:grid-cols-2">{OTHER_PROJECTS.map((p) => <ProjectCard key={p.title} p={p} compact />)}</div>
@@ -79,4 +76,4 @@ export default function Home() {
 }
 
 function Stat({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) { return <div className="glass-card p-5"><div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200">{icon} {title}</div><div className="mt-2 text-sm text-slate-200">{desc}</div></div>; }
-function Panel({ title, items }: { title: string; items: string[] }) { return <div className="glass-card p-6"><h3 className="text-lg font-semibold">{title}</h3><ul className="mt-4 space-y-2 text-sm text-slate-200">{items.map((i)=><li key={i} className="flex gap-2"><span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-emerald-300 to-violet-300" /><span>{i}</span></li>)}</ul></div>; }
+function Panel({ title, items }: { title: string; items: string[] }) { return <div className="glass-card p-5"><h3 className="text-lg font-semibold">{title}</h3><ul className="mt-4 space-y-2 text-sm text-slate-200">{items.map((i)=><li key={i} className="flex gap-2"><span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-300" /><span>{i}</span></li>)}</ul></div>; }
