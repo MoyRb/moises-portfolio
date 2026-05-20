@@ -31,6 +31,10 @@ const PROFILE_SKILLS = [
     title: "Comunicación",
     description: "Claridad para presentar avances, acuerdos y decisiones.",
   },
+  {
+    title: "Inglés C1 fluido",
+    description: "Comunicación fluida en inglés para colaboración, documentación y entornos profesionales.",
+  },
 ];
 
 const PROFILE_SKILLS_LOOP = [...PROFILE_SKILLS, ...PROFILE_SKILLS];
@@ -54,7 +58,8 @@ export default function Home() {
               <p className="mt-3 max-w-2xl text-sm text-slate-200 sm:text-base">
                 Estudiante de Ingeniería en Sistemas Computacionales con enfoque en liderazgo, operación comercial y desarrollo de
                 soluciones digitales. He coordinado operación en Croplink y trabajado en UCES, CachuProject, Flor del Volcán y
-                RackHouse, conectando necesidades reales de negocio con sistemas funcionales y orientados a resultados.
+                RackHouse, conectando necesidades reales de negocio con sistemas funcionales y orientados a resultados. También cuento
+                con dominio de inglés en nivel C1, con capacidad de comunicación fluida en contextos académicos, técnicos y profesionales.
               </p>
 
               <div className="hero-actions mt-6">
@@ -76,10 +81,9 @@ export default function Home() {
                     </article>
                   ))}
                 </div>
-                <div className="skills-carousel-focus" aria-hidden="true" />
               </div>
               <p className="mt-4 text-xs text-slate-300/90 sm:text-sm">
-                Enfoque en requerimientos, comunicación, priorización y entregables con impacto real.
+                Enfoque en requerimientos, comunicación, priorización, inglés C1 fluido y entregables con impacto real.
               </p>
             </aside>
           </div>
