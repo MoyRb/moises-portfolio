@@ -2,7 +2,38 @@ import { Github, Mail, MessageCircle, FolderOpen, Users, ClipboardList, Briefcas
 import ProjectCard from "@/components/ProjectCard";
 import { OTHER_PROJECTS, PROJECTS } from "@/lib/projects";
 
-const DASHBOARD_ITEMS = ["Liderazgo", "Dirección de proyecto", "Trabajo en equipo", "Operación comercial"];
+const PROFILE_SKILLS = [
+  {
+    title: "Liderazgo",
+    description: "Coordinación de equipos, comunicación y toma de decisiones.",
+  },
+  {
+    title: "Dirección de proyecto",
+    description: "Planeación, seguimiento de avances y organización de entregables.",
+  },
+  {
+    title: "Trabajo en equipo",
+    description: "Colaboración, distribución de responsabilidades y alineación de objetivos.",
+  },
+  {
+    title: "Operación comercial",
+    description: "Ventas, clientes, procesos y entendimiento de necesidades reales.",
+  },
+  {
+    title: "Requerimientos",
+    description: "Traducción de necesidades del negocio en funcionalidades claras.",
+  },
+  {
+    title: "Priorización",
+    description: "Ordenar tareas según impacto, urgencia y valor para el usuario.",
+  },
+  {
+    title: "Comunicación",
+    description: "Claridad para presentar avances, acuerdos y decisiones.",
+  },
+];
+
+const PROFILE_SKILLS_LOOP = [...PROFILE_SKILLS, ...PROFILE_SKILLS];
 
 export default function Home() {
   return (
@@ -36,12 +67,20 @@ export default function Home() {
 
             <aside className="hero-panel min-w-0">
               <h3 className="text-sm font-medium uppercase tracking-[0.12em] text-slate-300">Perfil profesional</h3>
-              <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-                {DASHBOARD_ITEMS.map((item) => (
-                  <div key={item} className="dashboard-item">{item}</div>
-                ))}
+              <div className="skills-carousel mt-4" aria-label="Carrusel de habilidades profesionales">
+                <div className="skills-carousel-track">
+                  {PROFILE_SKILLS_LOOP.map((skill, idx) => (
+                    <article key={`${skill.title}-${idx}`} className="skill-card">
+                      <h4 className="skill-card-title">{skill.title}</h4>
+                      <p className="skill-card-desc">{skill.description}</p>
+                    </article>
+                  ))}
+                </div>
+                <div className="skills-carousel-focus" aria-hidden="true" />
               </div>
-              <p className="mt-4 text-sm text-slate-300">Enfoque en requerimientos, comunicación, priorización y entregables con impacto real.</p>
+              <p className="mt-4 text-xs text-slate-300/90 sm:text-sm">
+                Enfoque en requerimientos, comunicación, priorización y entregables con impacto real.
+              </p>
             </aside>
           </div>
 
