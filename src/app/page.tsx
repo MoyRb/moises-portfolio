@@ -56,7 +56,7 @@ export default function Home() {
               <h1 className="name-title mt-4 font-semibold tracking-tight">Moisés Medina Moreno</h1>
               <h2 className="mt-2 text-lg font-medium text-emerald-100 sm:text-xl md:text-2xl">Gestión y Dirección de Proyectos de Software</h2>
               <p className="mt-3 max-w-2xl text-sm text-slate-200 sm:text-base">
-                Estudiante de Ingeniería en Sistemas Computacionales con enfoque en liderazgo, operación comercial y desarrollo de
+                Ing. Sistemas Computacionales con enfoque en liderazgo, operación comercial y desarrollo de
                 soluciones digitales. He coordinado operación en Croplink y trabajado en UCES, CachuProject, Flor del Volcán y
                 RackHouse, conectando necesidades reales de negocio con sistemas funcionales y orientados a resultados. También cuento
                 con dominio de inglés en nivel C1, con capacidad de comunicación fluida en contextos académicos, técnicos y profesionales.
