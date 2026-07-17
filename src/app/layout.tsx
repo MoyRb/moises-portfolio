@@ -1,9 +1,23 @@
+import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata = {
-  title: "Moisés Medina Moreno | Portafolio",
+export const metadata: Metadata = {
+  title: "Moisés Medina Moreno | Sistemas, Proyectos y Docencia",
   description:
-    "Portafolio orientado a análisis, reporteo, inventarios, ERP y optimización de procesos.",
+    "Portafolio de Moisés Medina Moreno, estudiante de Ingeniería en Sistemas Computacionales con experiencia en desarrollo de software, gestión de proyectos, docencia, enseñanza de inglés, redes Cisco y capacitación tecnológica.",
+  keywords: [
+    "docente de informática",
+    "maestro de informática",
+    "ingeniería en sistemas",
+    "desarrollo de software",
+    "Cisco Networking Academy",
+    "CCNA",
+    "redes",
+    "enseñanza de inglés",
+    "gestión de proyectos",
+    "Chilchota",
+    "Michoacán",
+  ],
 };
 
 export default function RootLayout({
