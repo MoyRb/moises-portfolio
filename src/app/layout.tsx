@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Moisés Medina Moreno | Sistemas, Proyectos y Docencia",
   description:
-    "Portafolio de Moisés Medina Moreno, estudiante de Ingeniería en Sistemas Computacionales con experiencia en desarrollo de software, gestión de proyectos, docencia, enseñanza de inglés, redes Cisco y capacitación tecnológica.",
+    "Portafolio de Moisés Medina Moreno, Ingeniero en Sistemas Computacionales con experiencia en desarrollo de software, gestión de proyectos, docencia, enseñanza de inglés, redes Cisco y capacitación tecnológica.",
   keywords: [
     "docente de informática",
     "maestro de informática",

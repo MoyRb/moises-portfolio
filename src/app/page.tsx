@@ -59,15 +59,6 @@ const TEACHING_TAGS = ["Planeación de clases", "Manejo de grupos", "Regularizac
 const CERT_TAGS = ["Cisco Networking Academy", "CCNA", "Redes", "Routing", "Switching", "Seguridad", "Automatización"];
 const PROFILE_SKILLS_LOOP = [...PROFILE_SKILLS, ...PROFILE_SKILLS];
 
-const NAV_ITEMS = [
-  { label: "Inicio", href: "#inicio" },
-  { label: "Perfil", href: "#perfil" },
-  { label: "Experiencia docente", href: "#experiencia-docente" },
-  { label: "Certificaciones", href: "#certificaciones" },
-  { label: "Proyectos", href: "#proyectos" },
-  { label: "Contacto", href: "#contacto" },
-];
-
 const TEACHING_EXPERIENCE = [
   {
     title: "Universidad Capital",
@@ -144,14 +135,6 @@ export default function Home() {
   return (
     <main id="inicio" className="portfolio-bg min-h-screen">
       <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 sm:py-10">
-        <nav className="site-nav mb-5" aria-label="Navegación principal">
-          <a className="nav-brand" href="#inicio">Moisés Medina Moreno</a>
-          <details className="nav-menu">
-            <summary aria-label="Abrir menú de navegación">Menú</summary>
-            <div className="nav-links">{NAV_ITEMS.map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</div>
-          </details>
-        </nav>
-
         <header className="hero-premium reveal-section relative scroll-mt-28 overflow-hidden rounded-[1.7rem] border border-white/10 p-5 sm:p-7 md:p-8">
           <div className="pointer-events-none absolute -top-20 -left-16 h-56 w-56 rounded-full bg-emerald-300/10 blur-3xl" />
           <div className="pointer-events-none absolute -right-16 -bottom-20 h-56 w-56 rounded-full bg-violet-300/10 blur-3xl" />
@@ -159,8 +142,8 @@ export default function Home() {
             <div className="min-w-0">
               <div className="inline-flex items-center rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-slate-200">Desarrollo de software · Informática · Redes · Docencia · Inglés C1</div>
               <h1 className="name-title mt-4 font-semibold tracking-tight">Moisés Medina Moreno</h1>
-              <h2 className="mt-2 text-lg font-medium text-emerald-100 sm:text-xl md:text-2xl">Ingeniería en Sistemas, Gestión de Proyectos y Docencia</h2>
-              <p className="mt-3 max-w-2xl text-sm text-slate-200 sm:text-base">Estudiante de Ingeniería en Sistemas Computacionales con experiencia en desarrollo de soluciones digitales, dirección de proyectos y docencia. He trabajado con estudiantes de diferentes edades, impartiendo clases en instituciones educativas, cursos de regularización y actividades de verano. Mi perfil combina conocimientos técnicos, comunicación, liderazgo y capacidad para explicar conceptos de manera clara, práctica y adaptada a distintos niveles de aprendizaje.</p>
+              <h2 className="mt-2 text-lg font-medium text-emerald-100 sm:text-xl md:text-2xl">Ingeniero en Sistemas Computacionales, Proyectos y Docencia</h2>
+              <p className="mt-3 max-w-2xl text-sm text-slate-200 sm:text-base">Ingeniero en Sistemas Computacionales con experiencia en desarrollo de soluciones digitales, dirección de proyectos y docencia. He trabajado con estudiantes de diferentes edades, impartiendo clases en instituciones educativas, cursos de regularización y actividades de verano. Mi perfil combina conocimientos técnicos, comunicación, liderazgo y capacidad para explicar conceptos de manera clara, práctica y adaptada a distintos niveles de aprendizaje.</p>
               <TagList tags={HERO_TAGS} className="mt-4" />
               <div className="hero-actions mt-6" id="contacto">
                 <a className="btn-premium" href="https://github.com/MoyRb" target="_blank" rel="noreferrer"><Github size={18} />GitHub</a>
