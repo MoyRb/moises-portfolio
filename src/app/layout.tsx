@@ -1,30 +1,41 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Moisés Medina Moreno | Sistemas, Proyectos y Docencia",
+  title: "Moisés Medina Moreno — Software Developer · Technical Project Manager",
   description:
-    "Portafolio de Moisés Medina Moreno, Ingeniero en Sistemas Computacionales con experiencia en desarrollo de software, gestión de proyectos, docencia, enseñanza de inglés, redes Cisco y capacitación tecnológica.",
+    "Software developer and technical project manager specializing in building digital products end-to-end — from requirements gathering and scope definition to development, deployment, and iteration.",
   keywords: [
-    "docente de informática",
-    "maestro de informática",
-    "ingeniería en sistemas",
-    "desarrollo de software",
-    "Cisco Networking Academy",
-    "CCNA",
-    "redes",
-    "enseñanza de inglés",
-    "gestión de proyectos",
-    "Chilchota",
-    "Michoacán",
+    "software developer",
+    "technical project manager",
+    "full stack developer",
+    "product developer",
+    "software engineer",
+    "Zamora Michoacán",
+    "Python",
+    "JavaScript",
+    "Supabase",
+    "Next.js",
   ],
+  openGraph: {
+    title: "Moisés Medina Moreno — Software Developer",
+    description: "Building software. Coordinating projects. Shipping products.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
+    <html lang="en" className={inter.variable}>
       <body>{children}</body>
     </html>
   );
