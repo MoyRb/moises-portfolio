@@ -3,38 +3,34 @@ export const PROFILE = {
   initials: "MM",
   role: "Software Developer",
   roleAlt: "Technical Project Manager",
-  tagline: "I turn real requirements into working software.",
-  summary:
-    "Final-year Computer Systems Engineering student with hands-on experience building digital products end-to-end. I bridge business needs and technical execution — gathering requirements, defining scope, writing code, coordinating projects, and shipping solutions that work in the real world.",
   email: "moisesmed2482@gmail.com",
   github: "https://github.com/MoyRb",
   githubHandle: "MoyRb",
   whatsapp: "https://wa.me/523511345108",
   location: "Zamora, Michoacán",
   education: {
-    degree: "B.Eng. Computer Systems Engineering",
+    degree: "Ingeniería en Sistemas Computacionales",
     institution: "Instituto Tecnológico de Zamora — TecNM",
-    status: "Final year · In progress",
+    status: "Etapa final · En curso",
   },
-  cvPath: "/cv/index.html",
 };
 
 export const ABOUT = {
-  headline: "A developer who ships.\nA coordinator who builds.",
+  headline: "Desarrollo software.\nGestiono proyectos.\nEntrego productos.",
   paragraphs: [
-    "I work at the intersection of software engineering, product thinking, and project coordination — taking ideas from the first stakeholder conversation through to a deployed, working product.",
-    "My experience at FORMEX gave me real exposure to client-facing product work: translating business needs into technical specifications, coordinating development cycles, making architecture decisions, and managing scope changes without losing momentum.",
-    "I write code, coordinate projects, document decisions, and communicate clearly across technical and non-technical teams. If a project needs someone who can own it from discovery to deployment — that's what I do.",
+    "Trabajo en la intersección entre ingeniería de software, visión de producto y coordinación de proyectos — llevando ideas desde la primera conversación con el cliente hasta un producto desplegado y funcionando.",
+    "Mi experiencia en FORMEX me dio exposición real a trabajo técnico orientado al cliente: traducir necesidades de negocio en especificaciones técnicas, coordinar ciclos de desarrollo, tomar decisiones de arquitectura y gestionar cambios de alcance sin perder momentum.",
+    "Escribo código, coordino proyectos, documento decisiones y me comunico con fluidez en entornos técnicos y no técnicos. Si un proyecto necesita a alguien que lo pueda llevar desde el descubrimiento hasta el despliegue, ese soy yo.",
   ],
   attributes: [
-    "Requirements Gathering",
-    "Scope Definition",
-    "Full-Stack Development",
-    "Project Coordination",
-    "Technical Documentation",
-    "Client Communication",
-    "Product Thinking",
-    "AI-Assisted Development",
+    "Levantamiento de requerimientos",
+    "Definición de alcance",
+    "Desarrollo Full Stack",
+    "Coordinación de proyectos",
+    "Documentación técnica",
+    "Comunicación con clientes",
+    "Visión de producto",
+    "Desarrollo asistido por IA",
   ],
 };
 
@@ -52,21 +48,21 @@ export type Experience = {
 export const EXPERIENCE: Experience[] = [
   {
     company: "FORMEX / FORMEX3D",
-    companyType: "Technology & Solutions",
-    role: "Software Developer & Technical Project Coordinator",
-    period: "2024 – Present",
-    duration: "~1 year",
+    companyType: "Tecnología y Soluciones",
+    role: "Desarrollador de Software y Coordinador Técnico de Proyectos",
+    period: "2024 – Presente",
+    duration: "~1 año",
     location: "Zamora, Michoacán",
     description:
-      "Served as the technical reference for client-facing software projects — owning the full cycle from requirements gathering and scope definition through development, validation, and deployment.",
+      "Fungí como referencia técnica para proyectos de software orientados a clientes — gestionando el ciclo completo desde el levantamiento de requerimientos y definición de alcance hasta el desarrollo, validación y despliegue.",
     highlights: [
-      "Led requirements-gathering sessions with clients, translating business needs into functional specifications and scoped technical proposals.",
-      "Defined project structures, timelines, and deliverables — coordinating progress from conceptualization through testing and deployment.",
-      "Drafted software proposals with effort sizing, module definitions, and architecture recommendations tailored to each client's constraints.",
-      "Bridged communication between commercial and technical stakeholders, keeping expectations aligned throughout the project lifecycle.",
-      "Participated in technology selection and architecture decisions, evaluating trade-offs between delivery speed, scalability, and cost.",
-      "Documented solutions, validated deliverables, and managed scope changes to maintain project integrity under real-world conditions.",
-      "Conceptualized and implemented solutions incorporating AI, NFC, REST APIs, cloud services, and automation where they added measurable product value.",
+      "Lideré sesiones de levantamiento de requerimientos con clientes, traduciendo necesidades de negocio en especificaciones funcionales y propuestas técnicas con alcance definido.",
+      "Definí estructuras de proyecto, plazos y entregables — coordinando el avance desde la conceptualización hasta pruebas y despliegue.",
+      "Elaboré propuestas de software con dimensionamiento de esfuerzo, definición de módulos y recomendaciones de arquitectura adaptadas a las restricciones de cada cliente.",
+      "Gestioné la comunicación entre stakeholders comerciales y técnicos, manteniendo las expectativas alineadas durante todo el ciclo de vida del proyecto.",
+      "Participé en decisiones de selección de tecnología y arquitectura, evaluando equilibrios entre velocidad de entrega, escalabilidad y costo.",
+      "Documenté soluciones, validé entregables y gestioné cambios de alcance para mantener la integridad del proyecto bajo condiciones reales.",
+      "Conceptualicé e implementé soluciones incorporando IA, NFC, APIs REST, servicios cloud y automatización donde agregaban valor real al producto.",
     ],
   },
 ];
@@ -86,104 +82,104 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     index: "01",
-    title: "NFC Student Access Control System",
+    title: "Sistema de Control de Acceso NFC",
     subtitle:
-      "End-to-end attendance management for an educational institution using NFC credentials.",
+      "Gestión de asistencia de principio a fin para una institución educativa mediante credenciales NFC.",
     problem:
-      "The institution needed a reliable, scalable way to track student attendance — replacing manual processes with a validated, tamper-resistant digital system.",
-    role: "Full system definition and development, from operational model to technical and commercial proposal.",
+      "La institución necesitaba una solución confiable y escalable para registrar la asistencia de estudiantes, reemplazando procesos manuales con un sistema digital validado.",
+    role: "Definición completa del sistema y desarrollo, desde el modelo operativo hasta la propuesta técnica y comercial.",
     highlights: [
-      "Defined the complete operational model: student registration, credential assignment, entry/exit validation, and duplicate-read prevention.",
-      "Developed the administration interface with full attendance history and reporting.",
-      "Adapted the architecture to support both Android NFC reading and USB NFC readers for deployment flexibility.",
-      "Structured the technical and commercial proposal for institutional rollout.",
+      "Definí el modelo operativo completo: registro de alumnos, asignación de credenciales NFC, validación de entradas/salidas y prevención de lecturas duplicadas.",
+      "Desarrollé la interfaz de administración con historial completo de asistencia y generación de reportes.",
+      "Adapté la arquitectura para soportar lectura NFC desde Android y lector USB, garantizando flexibilidad de implementación.",
+      "Estructuré la propuesta técnica y comercial para presentación ante la institución.",
     ],
     stack: ["Python", "NFC", "SQL", "Web"],
-    type: "Product Development",
+    type: "Desarrollo de Producto",
     featured: true,
   },
   {
     index: "02",
-    title: "Orders & Customer Loyalty Platform",
+    title: "Plataforma Web de Pedidos y Fidelización",
     subtitle:
-      "Full-stack web application deployed on Vercel for customers and business administrators.",
+      "Aplicación web full stack desplegada en Vercel para clientes y administradores de negocio.",
     problem:
-      "A business needed a digital ordering system with customer tracking and a loyalty program, replacing a fully manual operation.",
-    role: "Full-stack development from authentication design to production deployment.",
+      "Un negocio necesitaba un sistema digital de pedidos con seguimiento de clientes y programa de puntos, reemplazando una operación completamente manual.",
+    role: "Desarrollo full stack desde el diseño de autenticación hasta el despliegue en producción.",
     highlights: [
-      "Built complete authentication, order management, and order-history flows with data integrity enforced at the database layer.",
-      "Implemented a points-based loyalty system with persistent state across sessions.",
-      "Designed role-differentiated experiences for customers and business staff, including real-time new-order alerts for administrators.",
-      "Deployed and maintained the application on Vercel; integrated QR-based customer access.",
+      "Construí los flujos completos de autenticación, gestión de pedidos e historial de cliente, con integridad de datos garantizada a nivel de base de datos.",
+      "Implementé un sistema de puntos de fidelización con estado persistente entre sesiones.",
+      "Diseñé experiencias diferenciadas por rol — cliente y administrador — con alertas de nuevos pedidos en tiempo real.",
+      "Desplegué y mantuve la aplicación en Vercel con acceso por código QR para clientes.",
     ],
     stack: ["JavaScript", "Supabase", "PostgreSQL", "Vercel"],
-    type: "Full-Stack Web",
+    type: "Full Stack Web",
     featured: true,
   },
   {
     index: "03",
-    title: "Surgical Scheduling Optimizer",
+    title: "Optimizador de Programación Quirúrgica",
     subtitle:
-      "Decision-support tool converting a complex manual scheduling process into actionable software.",
+      "Herramienta de apoyo a la toma de decisiones que convierte un proceso manual complejo en software accionable.",
     problem:
-      "A surgical department's scheduling was entirely manual, making scenario evaluation and efficient planning nearly impossible.",
-    role: "Problem modeling, algorithm design, and interactive visualization development.",
+      "La programación de cirugías de un área hospitalaria era completamente manual, dificultando la evaluación de escenarios y la planificación eficiente.",
+    role: "Modelado del problema, diseño de la lógica de optimización y desarrollo de visualización interactiva.",
     highlights: [
-      "Modeled the operational problem, identified key scheduling variables, and designed the optimization logic for scenario evaluation.",
-      "Built an interactive visualization layer with Streamlit to surface insights and support real-time decision-making.",
-      "Delivered a functional tool that replaces a manual workflow with a structured, data-driven process.",
+      "Modelé el problema operativo, identifiqué variables clave y diseñé la lógica de optimización para evaluación de escenarios.",
+      "Construí una capa de visualización interactiva con Streamlit para presentar resultados y apoyar decisiones en tiempo real.",
+      "Entregué una herramienta funcional que reemplaza un flujo manual por un proceso estructurado orientado a datos.",
     ],
-    stack: ["Python", "Streamlit", "Algorithms", "Data Visualization"],
-    type: "Data & Optimization",
+    stack: ["Python", "Streamlit", "Algoritmos", "Visualización de datos"],
+    type: "Datos y Optimización",
     featured: false,
   },
   {
     index: "04",
-    title: "Enterprise Platform Design — CRM / ERP",
+    title: "Diseño de Plataformas Empresariales — CRM / ERP",
     subtitle:
-      "Requirements gathering and conceptual system design for businesses across multiple industries.",
+      "Levantamiento de requerimientos y diseño conceptual de sistemas para empresas de distintos sectores.",
     problem:
-      "Multiple businesses needed operational digitization — from CRM and inventory to payroll and production tracking — but lacked the architecture to begin.",
-    role: "Requirements analysis, modular system design, and technical proposal authoring.",
+      "Múltiples empresas necesitaban digitalizar su operación — desde CRM e inventarios hasta nómina y seguimiento de producción — sin arquitectura definida para comenzar.",
+    role: "Análisis de requerimientos, diseño modular de sistemas y elaboración de propuestas técnicas.",
     highlights: [
-      "Analyzed operational processes across production, payroll, inventory, temporary staffing, and process-tracking use cases.",
-      "Structured modular system designs with defined data flows, user roles, and integration points.",
-      "Produced technical proposals aligned to business objectives, timeline constraints, and existing infrastructure.",
+      "Analicé procesos operativos en producción, nómina, inventarios, personal temporal y seguimiento de procesos para identificar oportunidades de digitalización.",
+      "Estructuré diseños modulares con flujos de datos definidos, roles de usuario y puntos de integración.",
+      "Elaboré propuestas técnicas alineadas a objetivos de negocio, restricciones de tiempo e infraestructura existente.",
     ],
-    stack: ["Requirements", "System Architecture", "Product Design"],
-    type: "Product & Architecture",
+    stack: ["Requerimientos", "Arquitectura de sistemas", "Diseño de producto"],
+    type: "Producto y Arquitectura",
     featured: false,
   },
 ];
 
 export const STACK = [
   {
-    category: "Languages",
+    category: "Lenguajes",
     items: ["Python", "JavaScript", "SQL"],
   },
   {
-    category: "Web & APIs",
-    items: ["Node.js", "REST APIs", "Authentication", "HTML / CSS"],
+    category: "Web y APIs",
+    items: ["Node.js", "REST APIs", "Autenticación", "HTML / CSS"],
   },
   {
-    category: "Data & Databases",
-    items: ["Supabase", "PostgreSQL", "SQLite", "Relational DB design"],
+    category: "Datos y Bases de datos",
+    items: ["Supabase", "PostgreSQL", "SQLite", "Diseño relacional"],
   },
   {
-    category: "Infrastructure",
+    category: "Infraestructura",
     items: ["Git", "GitHub", "Vercel", "Docker", "Linux"],
   },
   {
-    category: "Tooling",
-    items: ["Streamlit", "AI-assisted development", "Rapid prototyping", "Technical documentation"],
+    category: "Herramientas",
+    items: ["Streamlit", "Desarrollo asistido por IA", "Prototipado rápido", "Documentación técnica"],
   },
   {
-    category: "Product & PM",
+    category: "Producto y Gestión",
     items: [
-      "Requirements gathering",
-      "Scope definition",
-      "Change management",
-      "Deliverable validation",
+      "Levantamiento de requerimientos",
+      "Definición de alcance",
+      "Gestión de cambios",
+      "Validación de entregables",
     ],
   },
 ];
@@ -191,38 +187,38 @@ export const STACK = [
 export const APPROACH = [
   {
     step: "01",
-    title: "Discover",
+    title: "Descubrir",
     description:
-      "Stakeholder conversations, requirements gathering, and understanding the real problem before the technical one.",
+      "Conversaciones con stakeholders, levantamiento de requerimientos y comprensión del problema real antes del técnico.",
   },
   {
     step: "02",
-    title: "Define",
+    title: "Definir",
     description:
-      "Scope definition, architecture decisions, technology selection, and deliverable planning.",
+      "Definición de alcance, decisiones de arquitectura, selección de tecnología y planificación de entregables.",
   },
   {
     step: "03",
-    title: "Build",
+    title: "Construir",
     description:
-      "Full-stack development with clean code, structured logic, and iterative progress toward a working product.",
+      "Desarrollo full stack con código limpio, lógica estructurada y avance iterativo hacia un producto funcional.",
   },
   {
     step: "04",
-    title: "Validate",
+    title: "Validar",
     description:
-      "Testing flows, edge cases, client feedback sessions, and real-world usage review.",
+      "Pruebas de flujos, casos borde, sesiones de retroalimentación con el cliente y revisión de uso real.",
   },
   {
     step: "05",
-    title: "Deploy",
+    title: "Desplegar",
     description:
-      "Shipping to production, configuring infrastructure, and ensuring a stable, reliable delivery.",
+      "Llevar a producción, configurar infraestructura y garantizar una entrega estable y confiable.",
   },
   {
     step: "06",
-    title: "Iterate",
+    title: "Iterar",
     description:
-      "Incorporating feedback, managing scope changes, and continuously improving the product.",
+      "Incorporar retroalimentación, gestionar cambios de alcance y mejorar el producto de forma continua.",
   },
 ];

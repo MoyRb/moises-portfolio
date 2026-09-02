@@ -39,15 +39,15 @@ export default function Home() {
         <p className="footer-copy">
           © {new Date().getFullYear()} {PROFILE.name} · {PROFILE.location}
         </p>
-        <nav className="footer-links" aria-label="Footer links">
+        <nav className="footer-links" aria-label="Enlaces del pie de página">
           <a href={PROFILE.github} target="_blank" rel="noreferrer" className="footer-link">
             GitHub
           </a>
           <a href={`mailto:${PROFILE.email}`} className="footer-link">
-            Email
+            Correo
           </a>
-          <a href={PROFILE.cvPath} target="_blank" rel="noreferrer" className="footer-link">
-            CV
+          <a href="#projects" className="footer-link">
+            Proyectos
           </a>
         </nav>
       </footer>

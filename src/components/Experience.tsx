@@ -6,9 +6,9 @@ export default function Experience() {
     <section id="experience" className="section" aria-labelledby="experience-heading">
       <div className="container">
         <RevealSection>
-          <div className="section-label">Experience</div>
+          <div className="section-label">Experiencia</div>
           <h2 id="experience-heading" className="section-title" style={{ marginBottom: "2.5rem" }}>
-            Where I&apos;ve worked
+            Dónde he trabajado
           </h2>
         </RevealSection>
 
@@ -41,7 +41,7 @@ export default function Experience() {
                 <div className="exp-meta">{exp.location}</div>
                 <p className="exp-description">{exp.description}</p>
 
-                <ul className="exp-highlights" aria-label="Key responsibilities">
+                <ul className="exp-highlights" aria-label="Responsabilidades y logros">
                   {exp.highlights.map((h) => (
                     <li key={h} className="exp-highlight">
                       {h}

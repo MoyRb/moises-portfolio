@@ -11,13 +11,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Moisés Medina Moreno — Software Developer · Technical Project Manager",
   description:
-    "Software developer and technical project manager specializing in building digital products end-to-end — from requirements gathering and scope definition to development, deployment, and iteration.",
+    "Portfolio de Moisés Medina Moreno, desarrollador de software y Technical Project Manager con experiencia construyendo productos digitales de principio a fin — desde el levantamiento de requerimientos hasta el despliegue en producción.",
   keywords: [
     "software developer",
     "technical project manager",
     "full stack developer",
-    "product developer",
-    "software engineer",
+    "desarrollador de software",
+    "gestión de proyectos",
     "Zamora Michoacán",
     "Python",
     "JavaScript",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Moisés Medina Moreno — Software Developer",
-    description: "Building software. Coordinating projects. Shipping products.",
+    description: "Desarrollo software. Gestiono proyectos. Entrego productos.",
     type: "website",
   },
 };
@@ -35,7 +35,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="es" className={inter.variable}>
       <body>{children}</body>
     </html>
   );

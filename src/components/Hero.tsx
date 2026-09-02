@@ -2,71 +2,72 @@ import { PROFILE } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section id="top" className="hero" aria-label="Hero">
-      {/* Background elements */}
+    <section id="top" className="hero" aria-label="Presentación">
+      {/* Fondo */}
       <div className="hero-grid" aria-hidden="true" />
       <div className="hero-glow" aria-hidden="true" />
       <div className="hero-glow-2" aria-hidden="true" />
 
       <div className="container hero-inner">
-        {/* Badge */}
-        <div className="hero-badge" aria-label="Role">
+        {/* Badge de rol */}
+        <div className="hero-badge" aria-label="Rol profesional">
           {PROFILE.role} · {PROFILE.roleAlt}
         </div>
 
-        {/* Name */}
+        {/* Nombre */}
         <h1 className="hero-name">{PROFILE.name}</h1>
 
-        {/* Tagline + summary */}
+        {/* Propuesta de valor */}
         <p className="hero-tagline">
-          <strong>Building software. Coordinating projects. Shipping products</strong> that solve real
-          problems — from the first requirement to the last deployment.
-        </p>
-
-        <p
-          style={{
-            fontSize: "0.9rem",
-            color: "var(--text-2)",
-            maxWidth: "38rem",
-            lineHeight: 1.75,
-            marginBottom: "2.25rem",
-          }}
-        >
-          {PROFILE.summary}
+          <strong>Desarrollo productos digitales</strong> y convierto necesidades de negocio en
+          soluciones funcionales, combinando programación, visión de producto y gestión técnica de
+          proyectos.
         </p>
 
         {/* CTAs */}
         <div className="hero-actions">
           <a href="#projects" className="btn btn-primary">
-            Selected work
+            Ver proyectos
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
-              <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+              <path
+                d="M1 7h12M7 1l6 6-6 6"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </a>
-          <a href={PROFILE.cvPath} target="_blank" rel="noreferrer" className="btn btn-secondary">
-            Download CV
-          </a>
           <a href="#contact" className="btn btn-secondary">
-            Get in touch
+            Contactar
+          </a>
+          <a
+            href={PROFILE.github}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-secondary"
+            aria-label="Ver perfil en GitHub"
+          >
+            GitHub ↗
           </a>
         </div>
 
-        {/* Meta strip */}
-        <div className="hero-meta" aria-label="Profile overview">
+        {/* Franja de metadatos */}
+        <div className="hero-meta" aria-label="Datos del perfil">
           <div className="hero-meta-item">
-            <span className="hero-meta-label">Education</span>
+            <span className="hero-meta-label">Formación</span>
             <span className="hero-meta-value">{PROFILE.education.degree}</span>
           </div>
           <div className="hero-meta-item">
-            <span className="hero-meta-label">Institution</span>
+            <span className="hero-meta-label">Institución</span>
             <span className="hero-meta-value">{PROFILE.education.institution}</span>
           </div>
           <div className="hero-meta-item">
-            <span className="hero-meta-label">Status</span>
+            <span className="hero-meta-label">Estado</span>
             <span className="hero-meta-value">{PROFILE.education.status}</span>
           </div>
           <div className="hero-meta-item">
-            <span className="hero-meta-label">Based in</span>
+            <span className="hero-meta-label">Ubicación</span>
             <span className="hero-meta-value">{PROFILE.location}</span>
           </div>
         </div>

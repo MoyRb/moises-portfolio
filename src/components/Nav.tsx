@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import { PROFILE } from "@/lib/data";
 
 const NAV_ITEMS = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
+  { label: "Sobre mí", href: "#about" },
+  { label: "Experiencia", href: "#experience" },
+  { label: "Proyectos", href: "#projects" },
   { label: "Stack", href: "#stack" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contacto", href: "#contact" },
 ];
 
 export default function Nav() {
@@ -24,12 +24,12 @@ export default function Nav() {
   return (
     <>
       <div className="nav-wrap">
-        <nav className="nav" role="navigation" aria-label="Main navigation">
-          <a href="#top" className="nav-brand">
+        <nav className="nav" role="navigation" aria-label="Navegación principal">
+          <a href="#top" className="nav-brand" aria-label="Inicio">
             {PROFILE.initials}<span>.</span>
           </a>
 
-          <div className="nav-links" aria-label="Desktop navigation">
+          <div className="nav-links" aria-label="Menú de navegación">
             {NAV_ITEMS.map((item) => (
               <a key={item.href} href={item.href} className="nav-link">
                 {item.label}
@@ -38,14 +38,20 @@ export default function Nav() {
           </div>
 
           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-            <a href={PROFILE.cvPath} target="_blank" rel="noreferrer" className="nav-cta nav-cta-desktop">
-              Download CV
+            <a
+              href={PROFILE.github}
+              target="_blank"
+              rel="noreferrer"
+              className="nav-cta nav-cta-desktop"
+              aria-label="Ver GitHub"
+            >
+              GitHub ↗
             </a>
 
             <button
               className="nav-toggle"
               onClick={() => setOpen((v) => !v)}
-              aria-label={open ? "Close menu" : "Open menu"}
+              aria-label={open ? "Cerrar menú" : "Abrir menú"}
               aria-expanded={open}
             >
               {open ? (
@@ -62,7 +68,7 @@ export default function Nav() {
         </nav>
       </div>
 
-      <div className={`nav-mobile${open ? " open" : ""}`} role="menu">
+      <div className={`nav-mobile${open ? " open" : ""}`} role="menu" aria-label="Menú móvil">
         {NAV_ITEMS.map((item) => (
           <a
             key={item.href}
@@ -75,14 +81,14 @@ export default function Nav() {
           </a>
         ))}
         <a
-          href={PROFILE.cvPath}
+          href={PROFILE.github}
           target="_blank"
           rel="noreferrer"
           className="nav-mobile-link"
           style={{ color: "var(--accent)", fontWeight: 600 }}
           onClick={handleLinkClick}
         >
-          Download CV ↗
+          GitHub ↗
         </a>
       </div>
     </>

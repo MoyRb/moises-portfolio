@@ -6,27 +6,27 @@ export default function About() {
     <section id="about" className="section" aria-labelledby="about-heading">
       <div className="container">
         <RevealSection>
-          <div className="section-label">About</div>
+          <div className="section-label">Sobre mí</div>
         </RevealSection>
 
         <div className="about-grid">
-          {/* Left — text */}
+          {/* Columna principal — texto */}
           <RevealSection delay={80}>
             <div className="about-text">
               <h2 id="about-heading" className="section-title" style={{ marginBottom: "2rem" }}>
-                {ABOUT.headline.split("\n").map((line, i) => (
+                {ABOUT.headline.split("\n").map((line, i, arr) => (
                   <span key={i}>
                     {line}
-                    {i === 0 && <br />}
+                    {i < arr.length - 1 && <br />}
                   </span>
                 ))}
               </h2>
 
               {ABOUT.paragraphs.map((p, i) => (
-                <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
+                <p key={i}>{p}</p>
               ))}
 
-              <div className="about-attrs" aria-label="Key competencies">
+              <div className="about-attrs" aria-label="Competencias clave">
                 {ABOUT.attributes.map((attr) => (
                   <span key={attr} className="attr-tag">
                     {attr}
@@ -36,24 +36,32 @@ export default function About() {
             </div>
           </RevealSection>
 
-          {/* Right — stats card */}
+          {/* Columna secundaria — datos */}
           <RevealSection delay={180}>
-            <div className="about-card" aria-label="Experience highlights">
+            <div className="about-card" aria-label="Resumen de experiencia">
               <div className="about-stat">
-                <div className="about-stat-value">~2 yrs</div>
-                <div className="about-stat-label">Project management experience (own + Formex)</div>
+                <div className="about-stat-value">~2 años</div>
+                <div className="about-stat-label">
+                  Gestión de proyectos (propios + Formex)
+                </div>
               </div>
               <div className="about-stat">
                 <div className="about-stat-value">4+</div>
-                <div className="about-stat-label">Digital products built end-to-end</div>
+                <div className="about-stat-label">
+                  Productos digitales construidos de principio a fin
+                </div>
               </div>
               <div className="about-stat">
-                <div className="about-stat-value">Full-cycle</div>
-                <div className="about-stat-label">Discovery → scope → code → deploy → iterate</div>
+                <div className="about-stat-value">Ciclo completo</div>
+                <div className="about-stat-label">
+                  Descubrimiento → alcance → código → despliegue → iteración
+                </div>
               </div>
               <div className="about-stat">
-                <div className="about-stat-value">Hybrid</div>
-                <div className="about-stat-label">Developer + Technical Project Manager profile</div>
+                <div className="about-stat-value">Perfil híbrido</div>
+                <div className="about-stat-label">
+                  Desarrollador + Technical Project Manager
+                </div>
               </div>
             </div>
           </RevealSection>
