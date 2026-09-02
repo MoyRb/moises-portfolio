@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — [NOMBRE COMPLETO]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent:    #1d4ed8;
+      --dark:      #0f172a;
+      --body:      #1e293b;
+      --muted:     #64748b;
+      --line:      #e2e8f0;
+      --bg:        #ffffff;
+      --tag-bg:    #f1f5f9;
+      --tag-text:  #334155;
+    }
+
+    html { font-size: 10.5pt; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--body);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Page Wrapper ─────────────────────────────────────────── */
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 52px;
+    }
+
+    /* ── Header ───────────────────────────────────────────────── */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      padding-bottom: 22px;
+      border-bottom: 2px solid var(--dark);
+      margin-bottom: 26px;
+    }
+
+    .header-left { flex: 1; }
+
+    .name {
+      font-size: 24pt;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 5px;
+    }
+
+    .headline {
+      font-size: 9.5pt;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .contact-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 3px;
+      font-size: 8.5pt;
+      color: var(--muted);
+      line-height: 1.6;
+      text-align: right;
+      padding-top: 4px;
+    }
+
+    .contact-block a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-block a:hover { text-decoration: underline; }
+
+    /* ── Section ──────────────────────────────────────────────── */
+    section { margin-bottom: 22px; }
+
+    .section-title {
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    /* ── Summary ──────────────────────────────────────────────── */
+    .summary {
+      font-size: 9.5pt;
+      color: var(--body);
+      line-height: 1.65;
+    }
+
+    /* ── Experience Entry ─────────────────────────────────────── */
+    .entry { margin-bottom: 18px; }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 1px;
+    }
+
+    .entry-company {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .entry-date {
+      font-size: 8pt;
+      color: var(--muted);
+      white-space: nowrap;
+      font-weight: 400;
+    }
+
+    .entry-title {
+      font-size: 9pt;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 7px;
+    }
+
+    .entry-subtitle {
+      font-size: 8.5pt;
+      color: var(--muted);
+      margin-bottom: 7px;
+    }
+
+    /* ── Bullet List ──────────────────────────────────────────── */
+    ul.bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    ul.bullets li {
+      font-size: 9pt;
+      color: var(--body);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    ul.bullets li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* ── Projects ─────────────────────────────────────────────── */
+    .project { margin-bottom: 16px; }
+    .project:last-child { margin-bottom: 0; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 2px;
+    }
+
+    .project-name {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .project-stack {
+      font-size: 7.8pt;
+      color: var(--muted);
+      white-space: nowrap;
+      font-weight: 400;
+    }
+
+    .project-desc {
+      font-size: 8.5pt;
+      color: var(--muted);
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+
+    /* ── Stack / Skills ───────────────────────────────────────── */
+    .stack-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .stack-row {
+      display: flex;
+      gap: 0;
+      align-items: baseline;
+      font-size: 9pt;
+    }
+
+    .stack-label {
+      font-weight: 600;
+      color: var(--dark);
+      min-width: 148px;
+      flex-shrink: 0;
+      font-size: 8.5pt;
+    }
+
+    .stack-value {
+      color: var(--body);
+      line-height: 1.5;
+    }
+
+    /* ── Education ────────────────────────────────────────────── */
+    .edu-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .edu-degree {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .edu-status {
+      font-size: 8.5pt;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .edu-school {
+      font-size: 8.5pt;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* ── Languages ────────────────────────────────────────────── */
+    .lang-row {
+      display: flex;
+      gap: 28px;
+      font-size: 9pt;
+    }
+
+    .lang-item strong {
+      color: var(--dark);
+      font-weight: 600;
+    }
+
+    .lang-item span {
+      color: var(--muted);
+    }
+
+    /* ── Print ────────────────────────────────────────────────── */
+    @media print {
+      html { font-size: 9.8pt; }
+
+      body { background: #fff; }
+
+      .page {
+        max-width: 100%;
+        padding: 18mm 18mm 16mm 18mm;
+        margin: 0;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      a { color: inherit !important; text-decoration: none !important; }
+
+      .header { page-break-inside: avoid; }
+      section { page-break-inside: avoid; }
+      .entry { page-break-inside: avoid; }
+      .project { page-break-inside: avoid; }
+    }
+
+    /* ── Screen preview frame ─────────────────────────────────── */
+    @media screen {
+      body { background: #f8fafc; }
+      .page {
+        box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 20px rgba(0,0,0,.06);
+        margin: 32px auto;
+        border-radius: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══ HEADER ══════════════════════════════════════════════ -->
+  <header class="header">
+    <div class="header-left">
+      <div class="name">[NOMBRE COMPLETO]</div>
+      <div class="headline">Software Developer &nbsp;·&nbsp; Technical Project Manager</div>
+    </div>
+    <div class="contact-block">
+      <span>[ciudad], México</span>
+      <span>[correo@ejemplo.com]</span>
+      <span>[+52 XXX XXX XXXX]</span>
+      <a href="https://github.com/[usuario]" target="_blank">github.com/[usuario]</a>
+      <a href="https://[portfolio-url]" target="_blank">[portfolio-url]</a>
+      <!-- <a href="https://linkedin.com/in/[usuario]">linkedin.com/in/[usuario]</a> -->
+    </div>
+  </header>
+
+  <!-- ══ PROFESSIONAL SUMMARY ═════════════════════════════════ -->
+  <section>
+    <div class="section-title">Professional Summary</div>
+    <p class="summary">
+      Final-year Computer Systems Engineering student with practical experience designing and shipping digital
+      products from first conversation with the client to production deployment. Combines technical proficiency
+      in web development, databases, and modern software tooling with a solid track record in requirements
+      gathering, scope definition, and project coordination. Has driven full development cycles across web
+      platforms, IoT integrations, and data-driven applications — always starting from the business problem,
+      not the technology. Actively integrates AI-assisted development workflows to accelerate prototyping,
+      code review, and iterative delivery.
+    </p>
+  </section>
+
+  <!-- ══ PROFESSIONAL EXPERIENCE ══════════════════════════════ -->
+  <section>
+    <div class="section-title">Professional Experience</div>
+
+    <div class="entry">
+      <div class="entry-header">
+        <span class="entry-company">FORMEX / FORMEX3D</span>
+        <span class="entry-date">[Mes Año] – Present &nbsp;·&nbsp; ~1 yr &nbsp;·&nbsp; Zamora, Mich.</span>
+      </div>
+      <div class="entry-title">Software Developer &amp; Technical Project Coordinator</div>
+      <ul class="bullets">
+        <li>Led requirements-gathering sessions with clients, converting business needs into scoped functional proposals and technical specifications.</li>
+        <li>Defined project structures, deliverables, and timelines — coordinating progress from conceptualization through testing and deployment.</li>
+        <li>Drafted software proposals with effort sizing, module definitions, and architecture recommendations tailored to each client's constraints.</li>
+        <li>Bridged communication between commercial and technical areas, keeping expectations aligned throughout the project lifecycle.</li>
+        <li>Participated in technology selection and architecture decisions, evaluating trade-offs between delivery speed, scalability, and cost.</li>
+        <li>Documented solutions, validated deliverables, and managed scope changes to maintain project integrity.</li>
+        <li>Conceptualized and developed solutions incorporating emerging technologies — AI, NFC, REST APIs, cloud services, and automation — where they added measurable value to the product.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ SELECTED PROJECTS ═════════════════════════════════════ -->
+  <section>
+    <div class="section-title">Selected Projects</div>
+
+    <!-- Project 1 -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">NFC Student Access Control System</span>
+        <span class="project-stack">Python &nbsp;·&nbsp; NFC &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Web</span>
+      </div>
+      <div class="project-desc">End-to-end attendance-tracking solution for an educational institution using NFC credentials.</div>
+      <ul class="bullets">
+        <li>Defined the full operational model and system flow: student registration, NFC credential assignment, entry/exit validation, and duplicate-read prevention.</li>
+        <li>Developed the administration interface with complete attendance history and reporting.</li>
+        <li>Adapted the architecture to support both Android NFC reading and USB NFC readers, ensuring deployment flexibility.</li>
+        <li>Structured the technical and commercial proposal for institutional rollout.</li>
+      </ul>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">Orders &amp; Customer Loyalty Web Platform</span>
+        <span class="project-stack">JavaScript &nbsp;·&nbsp; Supabase &nbsp;·&nbsp; Vercel</span>
+      </div>
+      <div class="project-desc">Full-stack web application deployed in production serving both end users and business administrators.</div>
+      <ul class="bullets">
+        <li>Built complete authentication, order management, and order-history flows with data integrity enforced at the database layer.</li>
+        <li>Implemented a points-based loyalty system with persistent state across sessions.</li>
+        <li>Designed role-differentiated experiences for customers and business staff, including real-time new-order alerts for administrators.</li>
+        <li>Deployed and maintained the application on Vercel; integrated QR-based access for customers.</li>
+      </ul>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">Surgical Scheduling Optimizer</span>
+        <span class="project-stack">Python &nbsp;·&nbsp; Streamlit &nbsp;·&nbsp; Algorithms</span>
+      </div>
+      <div class="project-desc">Decision-support tool that transforms a manual, complex scheduling process into actionable software.</div>
+      <ul class="bullets">
+        <li>Modeled the operational problem, identified key variables, and designed the optimization logic to evaluate scheduling scenarios.</li>
+        <li>Built an interactive visualization layer with Streamlit to surface insights and support real-time decision-making.</li>
+        <li>Delivered a functional tool that replaces an entirely manual workflow with a structured, data-driven process.</li>
+      </ul>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name">Enterprise Platform Design — CRM / ERP</span>
+        <span class="project-stack">Requirements &nbsp;·&nbsp; Architecture &nbsp;·&nbsp; Product Design</span>
+      </div>
+      <div class="project-desc">Requirements gathering and conceptual design of business systems across multiple industries.</div>
+      <ul class="bullets">
+        <li>Analyzed operational processes across production, payroll, inventory, temporary staffing, and process-tracking use cases.</li>
+        <li>Structured modular system designs with defined data flows, user roles, and integration points.</li>
+        <li>Produced technical proposals aligned to business objectives, timeline constraints, and existing infrastructure.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══ TECHNICAL STACK ═══════════════════════════════════════ -->
+  <section>
+    <div class="section-title">Technical Stack</div>
+    <div class="stack-grid">
+      <div class="stack-row">
+        <span class="stack-label">Languages</span>
+        <span class="stack-value">Python &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp; SQL</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Web &amp; APIs</span>
+        <span class="stack-value">Node.js &nbsp;·&nbsp; REST APIs &nbsp;·&nbsp; Authentication flows &nbsp;·&nbsp; HTML / CSS</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Databases</span>
+        <span class="stack-value">Supabase &nbsp;·&nbsp; PostgreSQL &nbsp;·&nbsp; SQLite &nbsp;·&nbsp; Relational DB design</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Tooling &amp; Infra</span>
+        <span class="stack-value">Git &nbsp;·&nbsp; GitHub &nbsp;·&nbsp; Vercel &nbsp;·&nbsp; Docker &nbsp;·&nbsp; Linux &nbsp;·&nbsp; Streamlit</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">AI-Assisted Dev</span>
+        <span class="stack-value">Rapid prototyping &nbsp;·&nbsp; Code generation &amp; review &nbsp;·&nbsp; LLM-powered debugging &nbsp;·&nbsp; Generative tools for documentation &amp; requirements analysis</span>
+      </div>
+      <div class="stack-row">
+        <span class="stack-label">Product &amp; PM</span>
+        <span class="stack-value">Requirements gathering &nbsp;·&nbsp; Scope definition &nbsp;·&nbsp; Change management &nbsp;·&nbsp; Technical documentation &nbsp;·&nbsp; Deliverable validation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EDUCATION ══════════════════════════════════════════════ -->
+  <section>
+    <div class="section-title">Education</div>
+    <div class="edu-entry">
+      <div>
+        <div class="edu-degree">B.Eng. in Computer Systems Engineering</div>
+        <div class="edu-school">Instituto Tecnológico de Zamora — TecNM &nbsp;·&nbsp; Zamora, Michoacán</div>
+      </div>
+      <div class="edu-status">In progress &nbsp;·&nbsp; Final year</div>
+    </div>
+  </section>
+
+  <!-- ══ LANGUAGES ══════════════════════════════════════════════ -->
+  <section>
+    <div class="section-title">Languages</div>
+    <div class="lang-row">
+      <div class="lang-item"><strong>Spanish</strong> &nbsp;<span>Native</span></div>
+      <div class="lang-item"><strong>English</strong> &nbsp;<span>[Intermediate / B2 / Professional working proficiency — actualizar]</span></div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
